@@ -1,0 +1,15 @@
+[providers]
+providers = ["node"]
+
+[build]
+cmds = ["npm install"]
+
+[start]
+cmd = "node index.js"
+
+[variables]
+NODE_ENV = "production"
+NIXPACKS_NODE_VERSION = "18"
+
+[phases.setup]
+nixPkgs = ["...", "nodejs-18_x"]
